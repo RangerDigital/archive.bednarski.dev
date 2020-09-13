@@ -10,13 +10,12 @@
     </section>
 
     <section class="flex-container">
-      <h1>Jakub<span class="text-red">.</span>Bednarski<span class="text-red">.Dev</span></h1>
+      <h1>Jakub<span class="cl-red">.</span>Bednarski<span class="cl-red">.Dev</span></h1>
       <div class="divider"></div>
+
       <div>
-        <p><span class="text-red">Software Engineer</span> who loves building and breaking visually pleasing products.</p>
-        <p class="mobile-hidden"
-          >Big fan of anime, <span class="text-red">Python</span>, <span class="text-red">Vue.js</span> and <span class="text-red">Open Source</span> software!</p
-        >
+        <p><span class="cl-red">Software Engineer</span> who loves building and breaking visually pleasing products.</p>
+        <p class="mobile-hidden">Big fan of anime, <span class="cl-red">Python</span>, <span class="cl-red">Vue.js</span> and <span class="cl-red">Open Source</span> software!</p>
       </div>
     </section>
 
@@ -75,11 +74,6 @@
     align-items: center;
     justify-content: space-around;
   }
-
-  .text-red {
-    color: #ff344a;
-  }
-
   .info-section {
     align-self: flex-end;
   }
@@ -104,6 +98,10 @@
     vertical-align: middle;
     margin-right: 0.6em;
     margin-left: 0.6em;
+    color: #ff344a;
+  }
+
+  .cl-red {
     color: #ff344a;
   }
 

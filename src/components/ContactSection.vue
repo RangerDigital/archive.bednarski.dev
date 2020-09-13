@@ -1,26 +1,26 @@
 <template>
   <div class="g-component-flex">
-    <h1>Let’s <span class="text-red">work together</span> on your next <span class="text-red">project.</span></h1>
+    <h1>Let’s <span class="cl-red">work together</span> on your next <span class="cl-red">project.</span></h1>
 
-    <section class="master-flex action-section">
-      <div class="horizontal-flex">
+    <section class="hero-flex-container description-section">
+      <div class="hr-flex">
         <div class="divider"></div>
-        <div class="vertical-flex">
+        <div class="vt-flex">
           <div>
             <p>Having a great idea to share?</p>
             <p>Or want to chat, just drop me a message.</p>
           </div>
           <a href="mailto:Jakub@Bednarski.Dev">
-            <h2><mail-icon size="1x" class="icon"></mail-icon>Jakub<span class="text-red">@</span>Bednarski<span class="text-red">.Dev</span></h2>
+            <h2><mail-icon size="1x" class="icon"></mail-icon>Jakub<span class="cl-red">@</span>Bednarski<span class="cl-red">.Dev</span></h2>
           </a>
         </div>
       </div>
 
-      <div class="horizontal-flex mobile-hidden">
-        <div class="vertical-flex">
-          <div class="horizontal-flex item">
+      <div class="hr-flex mobile-hidden">
+        <div class="vt-flex">
+          <div class="hr-flex item">
             <div class="divider"></div>
-            <div class="vertical-flex">
+            <div class="vt-flex">
               <h2><bookmark-icon size="1x" class="icon"></bookmark-icon>Web Design</h2>
               <div>
                 <p>I will create a modern and fresh</p>
@@ -29,9 +29,9 @@
             </div>
           </div>
 
-          <div class="horizontal-flex item">
+          <div class="hr-flex item">
             <div class="divider"></div>
-            <div class="vertical-flex">
+            <div class="vt-flex">
               <h2><cpu-icon size="1x" class="icon"></cpu-icon>Internet of Things</h2>
               <div>
                 <p>I will design and build your next</p>
@@ -41,10 +41,10 @@
           </div>
         </div>
 
-        <div class="vertical-flex">
-          <div class="horizontal-flex item">
+        <div class="vt-flex">
+          <div class="hr-flex item">
             <div class="divider"></div>
-            <div class="vertical-flex">
+            <div class="vt-flex">
               <h2><code-icon size="1x" class="icon"></code-icon>Web Development</h2>
               <div>
                 <p>I will build your dream web</p>
@@ -53,9 +53,9 @@
             </div>
           </div>
 
-          <div class="horizontal-flex item">
+          <div class="hr-flex item">
             <div class="divider"></div>
-            <div class="vertical-flex">
+            <div class="vt-flex">
               <h2><server-icon size="1x" class="icon"></server-icon>Operations</h2>
               <div>
                 <p>I will build and support your next </p>
@@ -68,7 +68,7 @@
     </section>
 
     <section class="links-section">
-      <div class="flex-section">
+      <div class="links-flex">
         <a href="https://github.com/RangerDigital">
           <p><github-icon size="1.5x" class="icon "></github-icon>GitHub</p>
         </a>
@@ -103,26 +103,6 @@
 </script>
 
 <style scoped>
-  .divider {
-    width: 0.25rem;
-
-    margin-right: 3rem;
-
-    border-radius: 10px;
-    background-color: #ff344a;
-  }
-
-  .text-red {
-    color: #ff344a;
-  }
-
-  .icon {
-    vertical-align: middle;
-    margin-right: 0.6em;
-    margin-left: 0.6em;
-    color: #ff344a;
-  }
-
   .links-section {
     display: flex;
     justify-content: space-between;
@@ -134,7 +114,7 @@
     margin: 1em;
   }
 
-  .flex-section {
+  .links-flex {
     display: flex;
   }
 
@@ -142,23 +122,23 @@
     align-self: stretch;
   }
 
-  .horizontal-flex {
+  .hr-flex {
     justify-content: space-around;
     display: flex;
   }
 
-  .master-flex {
+  .hero-flex-container {
     align-items: center;
     justify-content: space-between;
     display: flex;
     width: 95%;
   }
 
-  .action-section p {
+  .description-section p {
     text-align: left;
   }
 
-  .vertical-flex {
+  .vt-flex {
     width: 100%;
 
     display: flex;
@@ -169,13 +149,18 @@
     margin-bottom: 2rem;
   }
 
+  .divider {
+    width: 0.25rem;
+
+    margin-right: 3rem;
+
+    border-radius: 10px;
+    background-color: #ff344a;
+  }
+
   .item {
     margin: 5rem;
     min-width: 40rem;
-  }
-
-  .text-red {
-    color: #ff344a;
   }
 
   .icon {
@@ -185,13 +170,17 @@
     color: #ff344a;
   }
 
+  .cl-red {
+    color: #ff344a;
+  }
+
   @media only screen and (max-width: 900px) {
     .links-section {
       flex-direction: column;
       align-items: center;
     }
 
-    .master-flex {
+    .hero-flex-container {
       flex-direction: column-reverse;
     }
 

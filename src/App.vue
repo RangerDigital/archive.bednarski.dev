@@ -25,9 +25,9 @@
 <script>
   import HeroSection from "./components/HeroSection.vue";
 
-  import AlphaProjectSection from "./components/AlphaProjectSection.vue";
-  import BravoProjectSection from "./components/BravoProjectSection.vue";
-  import CharlieProjectSection from "./components/CharlieProjectSection.vue";
+  import AlphaProjectSection from "./components/projects/AlphaProjectSection.vue";
+  import BravoProjectSection from "./components/projects/BravoProjectSection.vue";
+  import CharlieProjectSection from "./components/projects/CharlieProjectSection.vue";
 
   import ContactSection from "./components/ContactSection.vue";
 
@@ -44,8 +44,7 @@
       return {
         options: {
           licenseKey: "Open Source!",
-          navigation: true,
-          navigationPosition: "right",
+          controlArrows: true,
         },
       };
     },
@@ -89,6 +88,15 @@
     text-align: center;
 
     margin: 0.5em;
+  }
+
+  /* Links hover animation. */
+  a p {
+    transition: color 0.5s;
+  }
+
+  a p:hover {
+    color: #ff344a;
   }
 
   /* Global Helpers */

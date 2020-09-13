@@ -29,4 +29,10 @@
     color: #e4e4e4;
     letter-spacing: 0.01em;
   }
+
+  .button:focus {
+    border-style: outset;
+    outline: none;
+    box-shadow: none !important;
+  }
 </style>
