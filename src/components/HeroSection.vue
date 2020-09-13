@@ -21,7 +21,7 @@
     </section>
 
     <section>
-      <outline-button><heart-icon size="1.5x" class="button-icon"></heart-icon>SEE MY WORK</outline-button>
+      <outline-button @click-event="$emit('scroll-down-event')"><heart-icon size="1.5x" class="button-icon"></heart-icon>SEE MY WORK</outline-button>
       <p>Or just scroll down.</p>
     </section>
 

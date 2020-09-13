@@ -1,7 +1,7 @@
 <template>
-  <full-page ref="fullpage" id="fullpage">
+  <full-page ref="fullpage" :options="options" id="fullpage">
     <section class="section">
-      <hero-section />
+      <hero-section @scroll-down-event="$refs.fullpage.api.moveSectionDown()" />
     </section>
     <section class="section">
       <contact-section />
@@ -18,6 +18,15 @@
     components: {
       HeroSection,
       ContactSection,
+    },
+    data() {
+      return {
+        options: {
+          licenseKey: "Open Source!",
+          navigation: true,
+          navigationPosition: "right",
+        },
+      };
     },
   };
 </script>
