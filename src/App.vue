@@ -3,6 +3,19 @@
     <section class="section">
       <hero-section @scroll-down-event="$refs.fullpage.api.moveSectionDown()" />
     </section>
+
+    <section class="section">
+      <alpha-project-section />
+    </section>
+
+    <section class="section">
+      <bravo-project-section />
+    </section>
+
+    <section class="section">
+      <charlie-project-section />
+    </section>
+
     <section class="section">
       <contact-section />
     </section>
@@ -11,6 +24,11 @@
 
 <script>
   import HeroSection from "./components/HeroSection.vue";
+
+  import AlphaProjectSection from "./components/AlphaProjectSection.vue";
+  import BravoProjectSection from "./components/BravoProjectSection.vue";
+  import CharlieProjectSection from "./components/CharlieProjectSection.vue";
+
   import ContactSection from "./components/ContactSection.vue";
 
   export default {
@@ -18,6 +36,9 @@
     components: {
       HeroSection,
       ContactSection,
+      AlphaProjectSection,
+      BravoProjectSection,
+      CharlieProjectSection,
     },
     data() {
       return {
@@ -56,8 +77,7 @@
     color: #e4e4e4;
     letter-spacing: 0.03em;
 
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
+    margin: 0.5em;
   }
 
   p {
@@ -132,7 +152,7 @@
   /* Tablets and laptops. */
   @media only screen and (min-width: 900px) and (max-width: 1600px) {
     html {
-      font-size: 8px;
+      font-size: 7px;
     }
 
     h1 {
@@ -147,7 +167,7 @@
   /* Normal sized desktops. */
   @media only screen and (min-width: 1600px) and (max-width: 2000px) {
     html {
-      font-size: 9px;
+      font-size: 9.5px;
     }
 
     .g-component-flex {
@@ -155,7 +175,7 @@
     }
   }
 
-  /* Ultra big desktops. */
+  /* Horizontal smartphones. */
   @media only screen and (max-height: 500px) {
     html {
       font-size: 3px;
