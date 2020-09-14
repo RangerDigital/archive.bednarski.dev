@@ -27,7 +27,7 @@
         </div>
       </div>
 
-      <img class="img-vis anim-float" src="../../assets/NekoBox.png" />
+      <img class="img-vis anim-float" src="../../assets/NekoBox.png" alt="NekoBox - Mockup" />
     </section>
 
     <div></div>

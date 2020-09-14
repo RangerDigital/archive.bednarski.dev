@@ -30,7 +30,7 @@
         </div>
       </div>
 
-      <img class="img-vis anim-float" src="../../assets/Kyouka.png" />
+      <img class="img-vis anim-float" src="../../assets/Kyouka.png" alt="Kyouka - Mockup" />
     </section>
 
     <div></div>

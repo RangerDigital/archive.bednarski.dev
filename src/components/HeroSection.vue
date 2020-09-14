@@ -53,11 +53,6 @@
       DribbbleIcon,
       BoxIcon,
     },
-    methods: {
-      fireRainbow() {
-        
-      },
-    },
   };
 </script>
 

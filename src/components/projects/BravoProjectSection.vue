@@ -33,7 +33,7 @@
         </div>
       </div>
 
-      <img class="img-vis anim-float" src="../../assets/Takagi.png" />
+      <img class="img-vis anim-float" src="../../assets/Takagi.png" alt="Takagi - Mockup" />
     </section>
 
     <div></div>
