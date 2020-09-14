@@ -1,29 +1,34 @@
 <template>
-  <full-page ref="fullpage" :options="options" id="fullpage">
-    <section class="section">
-      <hero-section @scroll-down-event="$refs.fullpage.api.moveSectionDown()" />
-    </section>
+  <div>
+    <loading-overlay class="mobile-hidden" @scroll-to-top="$refs.fullpage.api.moveTo(1)" />
 
-    <section class="section">
-      <alpha-project-section />
-    </section>
+    <full-page ref="fullpage" :options="options" id="fullpage">
+      <section class="section">
+        <hero-section @scroll-down-event="$refs.fullpage.api.moveSectionDown()" />
+      </section>
 
-    <section class="section">
-      <bravo-project-section />
-    </section>
+      <section class="section">
+        <alpha-project-section />
+      </section>
 
-    <section class="section">
-      <charlie-project-section />
-    </section>
+      <section class="section">
+        <bravo-project-section />
+      </section>
 
-    <section class="section">
-      <contact-section />
-    </section>
-  </full-page>
+      <section class="section">
+        <charlie-project-section />
+      </section>
+
+      <section class="section">
+        <contact-section />
+      </section>
+    </full-page>
+  </div>
 </template>
 
 <script>
   import HeroSection from "./components/HeroSection.vue";
+  import LoadingOverlay from "./components/LoadingOverlay.vue";
 
   import AlphaProjectSection from "./components/projects/AlphaProjectSection.vue";
   import BravoProjectSection from "./components/projects/BravoProjectSection.vue";
@@ -35,6 +40,7 @@
     name: "App",
     components: {
       HeroSection,
+      LoadingOverlay,
       ContactSection,
       AlphaProjectSection,
       BravoProjectSection,
@@ -59,6 +65,7 @@
   html {
     font-size: 10px;
     background-color: #131313;
+    overflow-y: hidden;
   }
 
   :root {
