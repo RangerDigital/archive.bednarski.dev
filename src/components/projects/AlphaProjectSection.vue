@@ -95,7 +95,7 @@
     margin-right: 3rem;
 
     border-radius: 10px;
-    background-color: #ff344a;
+    background-color: var(--primary-color);
   }
 
   .text-description {
@@ -113,11 +113,11 @@
     vertical-align: middle;
     margin-right: 0.6em;
     margin-left: 0;
-    color: #ff344a;
+    color: var(--primary-color);
   }
 
   .cl-red {
-    color: #ff344a;
+    color: var(--primary-color);
   }
 
   /* Animations. */

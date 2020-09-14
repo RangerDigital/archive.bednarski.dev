@@ -61,6 +61,10 @@
     background-color: #131313;
   }
 
+  :root {
+    --primary-color: #ff344a;
+  }
+
   h1 {
     font-size: 9rem;
     font-weight: 500;

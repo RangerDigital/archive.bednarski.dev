@@ -53,6 +53,11 @@
       DribbbleIcon,
       BoxIcon,
     },
+    methods: {
+      fireRainbow() {
+        
+      },
+    },
   };
 </script>
 
@@ -64,7 +69,7 @@
     margin: 1rem;
 
     border-radius: 10px;
-    background-color: #ff344a;
+    background-color: var(--primary-color);
   }
 
   .flex-container {
@@ -98,16 +103,16 @@
     vertical-align: middle;
     margin-right: 0.6em;
     margin-left: 0.6em;
-    color: #ff344a;
+    color: var(--primary-color);
   }
 
   .cl-red {
-    color: #ff344a;
+    color: var(--primary-color);
   }
 
   .button-icon {
     vertical-align: middle;
     margin-right: 1em;
-    color: #ff344a;
+    color: var(--primary-color);
   }
 </style>

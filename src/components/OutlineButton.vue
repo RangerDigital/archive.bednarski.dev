@@ -18,7 +18,7 @@
     display: block;
 
     background-color: #131313;
-    border: 0.25rem solid #ff344a;
+    border: 0.25rem solid var(--primary-color);
     border-radius: 1em;
   }
 
