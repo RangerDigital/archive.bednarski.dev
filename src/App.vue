@@ -52,6 +52,7 @@
           licenseKey: "Open Source!",
           controlArrows: true,
           afterLoad: this.afterLoad,
+          loopBottom: true,
         },
       };
     },
