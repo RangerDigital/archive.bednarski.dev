@@ -5,7 +5,7 @@
     <section class="hero-flex-container description-section">
       <div class="hr-flex">
         <div class="divider"></div>
-        <div class="vt-flex">
+        <div class="vt-flex text-field">
           <div>
             <p>Having a great idea to share?</p>
             <p>Or want to chat, just drop me a message.</p>
@@ -99,6 +99,42 @@
       CpuIcon,
       MailIcon,
     },
+    data() {
+      return {
+        isLoaded: false,
+      };
+    },
+    methods: {
+      startAnimation() {
+        if (this.isLoaded) {
+          return;
+        }
+        this.isLoaded = true;
+
+        this.$anime({
+          targets: ".item",
+          opacity: 1,
+          translateY: ["15%", "0%"],
+          delay: this.$anime.stagger(300, { start: 500, easing: "linear" }),
+          easing: "easeInOutQuad",
+        });
+
+        this.$anime({
+          targets: ".text-field",
+          opacity: 1,
+          translateX: ["-10%", "0%"],
+          easing: "easeOutQuad",
+        });
+
+        this.$anime({
+          targets: ".links-section p",
+          opacity: 1,
+          translateY: ["-10%", "0%"],
+          delay: this.$anime.stagger(300, { start: 1000, easing: "linear" }),
+          easing: "easeOutQuad",
+        });
+      },
+    },
   };
 </script>
 
@@ -112,6 +148,7 @@
   .links-section p {
     text-align: left;
     margin: 1em;
+    opacity: 0;
   }
 
   .links-flex {
@@ -161,6 +198,8 @@
   .item {
     margin: 5rem;
     min-width: 40rem;
+
+    opacity: 0;
   }
 
   .icon {
@@ -172,6 +211,10 @@
 
   .cl-red {
     color: var(--primary-color);
+  }
+
+  .text-field {
+    opacity: 0;
   }
 
   @media only screen and (max-width: 900px) {

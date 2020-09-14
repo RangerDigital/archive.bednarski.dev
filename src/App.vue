@@ -8,19 +8,19 @@
       </section>
 
       <section class="section">
-        <alpha-project-section />
+        <alpha-project-section ref="alphaSection" />
       </section>
 
       <section class="section">
-        <bravo-project-section />
+        <bravo-project-section ref="bravoSection" />
       </section>
 
       <section class="section">
-        <charlie-project-section />
+        <charlie-project-section ref="charlieSection" />
       </section>
 
       <section class="section">
-        <contact-section />
+        <contact-section ref="contactSection" />
       </section>
     </full-page>
   </div>
@@ -51,8 +51,28 @@
         options: {
           licenseKey: "Open Source!",
           controlArrows: true,
+          afterLoad: this.afterLoad,
         },
       };
+    },
+    methods: {
+      afterLoad(origin, destination, direction) {
+        if (direction == "down") {
+          switch (destination.index) {
+            case 1:
+              this.$refs.alphaSection.startAnimation();
+              break;
+            case 2:
+              this.$refs.bravoSection.startAnimation();
+              break;
+            case 3:
+              this.$refs.charlieSection.startAnimation();
+              break;
+            case 4:
+              this.$refs.contactSection.startAnimation();
+          }
+        }
+      },
     },
   };
 </script>

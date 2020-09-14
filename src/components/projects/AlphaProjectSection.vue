@@ -7,19 +7,19 @@
         <div class="divider"></div>
 
         <div class="vt-flex">
-          <h2><radio-icon size="1.5x" class="icon"></radio-icon>Kyouka</h2>
+          <h2 class="anim-in-alpha"><radio-icon size="1.5x" class="icon"></radio-icon>Kyouka</h2>
 
-          <p class="text-description"
+          <p class="text-description anim-in-alpha"
             ><span class="cl-red">Kyouka</span> is a web application build with <span class="cl-red">FastAPI</span> and <span class="cl-red">Vue.js</span> used to control
             <span class="cl-red">Windows Media Keys</span> remotely using your smartphone or any browser.
           </p>
 
-          <p class="text-description mobile-hidden">
+          <p class="text-description mobile-hidden anim-in-alpha">
             This allows you to <span class="cl-red">control music</span> playing from YouTube, or any other media player <span class="cl-red">on your desktop</span> while in bed
             and <span class="cl-red">away from the keyboard.</span>
           </p>
 
-          <div class="links-flex">
+          <div class="links-flex anim-in-alpha">
             <a href="https://github.com/RangerDigital/kyouka">
               <p><github-icon size="1.5x" class="icon"></github-icon>GitHub</p>
             </a>
@@ -49,14 +49,23 @@
     },
     data() {
       return {
-        options: {
-          afterLoad: this.afterLoad,
-        },
+        isLoaded: false,
       };
     },
     methods: {
-      afterLoad() {
-        console.log("Fired Section Alpha animations.");
+      startAnimation() {
+        if (this.isLoaded) {
+          return;
+        }
+        this.isLoaded = true;
+
+        this.$anime({
+          targets: ".anim-in-alpha",
+          opacity: 1,
+          translateX: ["-10%", "0%"],
+          delay: this.$anime.stagger(300, { start: 0, easing: "linear" }),
+          easing: "easeOutQuad",
+        });
       },
     },
   };
@@ -118,6 +127,10 @@
 
   .cl-red {
     color: var(--primary-color);
+  }
+
+  .anim-in-alpha {
+    opacity: 0;
   }
 
   /* Animations. */

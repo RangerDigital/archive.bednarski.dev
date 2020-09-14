@@ -7,19 +7,19 @@
         <div class="divider"></div>
 
         <div class="vt-flex">
-          <h2><tag-icon size="1.5x" class="icon "></tag-icon>Takagi</h2>
+          <h2 class="anim-in-bravo"><tag-icon size="1.5x" class="icon "></tag-icon>Takagi</h2>
 
-          <p class="text-description"
+          <p class="text-description anim-in-bravo"
             ><span class="cl-red">Takagi</span> is a simple <span class="cl-red">web application</span> build with <span class="cl-red">Flask</span> and
             <span class="cl-red">Vue.js</span> used to conduct anonymous polls built for my university course.
           </p>
 
-          <p class="text-description mobile-hidden">
+          <p class="text-description mobile-hidden anim-in-bravo">
             It features <span class="cl-red">JWT</span> based <span class="cl-red">authentication system</span>, Sentry <span class="cl-red">exception monitoring</span>, and
             <span class="cl-red">End-To-End</span> tests build with the <span class="cl-red">Cypress</span> testing framework.
           </p>
 
-          <div class="links-flex">
+          <div class="links-flex anim-in-bravo">
             <a href="https://github.com/RangerDigital/takagi">
               <p><github-icon size="1.5x" class="icon "></github-icon>GitHub</p>
             </a>
@@ -50,6 +50,27 @@
       DribbbleIcon,
       TagIcon,
       LinkIcon,
+    },
+    data() {
+      return {
+        isLoaded: false,
+      };
+    },
+    methods: {
+      startAnimation() {
+        if (this.isLoaded) {
+          return;
+        }
+        this.isLoaded = true;
+
+        this.$anime({
+          targets: ".anim-in-bravo",
+          opacity: 1,
+          translateX: ["-10%", "0%"],
+          delay: this.$anime.stagger(300, { start: 0, easing: "linear" }),
+          easing: "easeOutQuad",
+        });
+      },
     },
   };
 </script>
@@ -110,6 +131,10 @@
 
   .cl-red {
     color: var(--primary-color);
+  }
+
+  .anim-in-bravo {
+    opacity: 0;
   }
 
   /* Animations. */

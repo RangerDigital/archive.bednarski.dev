@@ -7,19 +7,19 @@
         <div class="divider"></div>
 
         <div class="vt-flex">
-          <h2><layers-icon size="1.5x" class="icon "></layers-icon>Neko-Box</h2>
+          <h2 class="anim-in-charlie"><layers-icon size="1.5x" class="icon "></layers-icon>Neko-Box</h2>
 
-          <p class="text-description"
+          <p class="text-description anim-in-charlie"
             ><span class="cl-red">Neko-Box</span> is a simple <span class="cl-red">GitHub Action</span> built to make <span class="cl-red">dynamic gist</span> displaying your
             <span class="cl-red">latest activity</span> from <span class="cl-red">AniList</span>.
           </p>
 
-          <p class="text-description mobile-hidden">
+          <p class="text-description mobile-hidden anim-in-charlie">
             It uses a <span class="cl-red">Docker</span> based <span class="cl-red">Python</span> script interacting with <span class="cl-red">AniList</span> and
             <span class="cl-red">GitHub API</span> every 10 minutes. This Action is available on <span class="cl-red">GitHub Marketplace</span>.
           </p>
 
-          <div class="links-flex">
+          <div class="links-flex anim-in-charlie">
             <a href="https://github.com/RangerDigital/neko-box">
               <p><github-icon size="1.5x" class="icon "></github-icon>GitHub</p>
             </a>
@@ -42,6 +42,27 @@
     components: {
       GithubIcon,
       LayersIcon,
+    },
+    data() {
+      return {
+        isLoaded: false,
+      };
+    },
+    methods: {
+      startAnimation() {
+        if (this.isLoaded) {
+          return;
+        }
+        this.isLoaded = true;
+
+        this.$anime({
+          targets: ".anim-in-charlie",
+          opacity: 1,
+          translateX: ["-10%", "0%"],
+          delay: this.$anime.stagger(300, { start: 0, easing: "linear" }),
+          easing: "easeOutQuad",
+        });
+      },
     },
   };
 </script>
@@ -102,6 +123,10 @@
 
   .cl-red {
     color: var(--primary-color);
+  }
+
+  .anim-in-charlie {
+    opacity: 0;
   }
 
   /* Animations. */
