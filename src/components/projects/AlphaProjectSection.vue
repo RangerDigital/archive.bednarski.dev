@@ -156,6 +156,7 @@
   @media only screen and (max-width: 900px) {
     .hero-flex-container {
       flex-direction: column-reverse;
+      justify-content: space-around;
       height: 70%;
     }
 
