@@ -60,6 +60,9 @@
       afterLoad(origin, destination, direction) {
         if (direction == "down") {
           switch (destination.index) {
+            case 0:
+              window.document.title = "Jakub Bednarski | Designer / Software Engineer";
+              break;
             case 1:
               this.$refs.alphaSection.startAnimation();
               break;
@@ -71,6 +74,7 @@
               break;
             case 4:
               this.$refs.contactSection.startAnimation();
+              window.document.title = "Thanks, Get in Touch! 🖐 ";
           }
         }
       },
