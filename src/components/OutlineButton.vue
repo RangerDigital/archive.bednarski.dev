@@ -28,11 +28,17 @@
     font-family: "Poppins";
     color: #e4e4e4;
     letter-spacing: 0.01em;
+
+    transition: color 0.5s;
   }
 
   .button:focus {
     border-style: outset;
     outline: none;
     box-shadow: none !important;
+  }
+
+  .button:hover p {
+    color: var(--primary-color);
   }
 </style>
