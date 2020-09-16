@@ -62,19 +62,34 @@
           switch (destination.index) {
             case 0:
               window.document.title = "Jakub Bednarski | Designer / Software Engineer";
+              this.$gtag.pageview({
+                page_path: "/#landing",
+              });
               break;
             case 1:
               this.$refs.alphaSection.startAnimation();
+              this.$gtag.pageview({
+                page_path: "/#alpha",
+              });
               break;
             case 2:
               this.$refs.bravoSection.startAnimation();
+              this.$gtag.pageview({
+                page_path: "/#bravo",
+              });
               break;
             case 3:
               this.$refs.charlieSection.startAnimation();
+              this.$gtag.pageview({
+                page_path: "/#charlie",
+              });
               break;
             case 4:
               this.$refs.contactSection.startAnimation();
               window.document.title = "Thanks, Get in Touch! 🖐 ";
+              this.$gtag.pageview({
+                page_path: "/#contact",
+              });
           }
         }
       },

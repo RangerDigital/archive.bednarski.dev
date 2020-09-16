@@ -8,7 +8,12 @@ import VueGtag from "vue-gtag";
 Vue.prototype.$anime = anime;
 
 Vue.use(VueGtag, {
-  config: { id: "UA-177948119-1" },
+  config: {
+    id: "UA-177948119-1",
+    params: {
+      send_page_view: true,
+    },
+  },
 });
 
 Vue.use(VueFullPage);
