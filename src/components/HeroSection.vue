@@ -2,7 +2,7 @@
   <div class="g-component-flex">
     <section class="info-section">
       <a href="mailto:Jakub@Bednarski.Dev">
-        <p>Jakub@Bednarski.dev <mail-icon size="1.5x" class="icon "></mail-icon></p>
+        <p translate="no">Jakub@Bednarski.dev <mail-icon size="1.5x" class="icon "></mail-icon></p>
       </a>
       <a href="https://goo.gl/maps/wzUE81CNHKstQQaK6">
         <p>Rzeszów, Poland <map-pin-icon size="1.5x" class="icon "></map-pin-icon></p>
@@ -10,7 +10,7 @@
     </section>
 
     <section class="flex-container">
-      <h1>Jakub<span class="cl-red">.</span>Bednarski<span class="cl-red">.Dev</span></h1>
+      <h1 translate="no">Jakub<span class="cl-red" translate="no">.</span>Bednarski<span class="cl-red" translate="no">.Dev</span></h1>
       <div class="divider"></div>
 
       <div>

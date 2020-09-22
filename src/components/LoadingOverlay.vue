@@ -2,15 +2,15 @@
   <div class="container" v-if="!loadingComplete" @click="loadingComplete = true">
     <div class="slides"></div>
     <div class="slides vt-flex">
-      <h3 class="title">Developer,</h3>
+      <h3 class="title" translate="no">Developer,</h3>
     </div>
     <div class="slides vt-flex">
       <img class="avatar" src="../assets/avatar.gif" alt="Personal Avatar" />
-      <h3 class="title">Designer,</h3>
+      <h3 class="title" translate="no">Designer,</h3>
       <img class="hidden avatar" src="../assets/avatar.gif" alt="Personal Avatar" />
     </div>
     <div class="slides vt-flex">
-      <h3 class="title cl-red">Weeb.</h3>
+      <h3 class="title cl-red" translate="no">Weeb.</h3>
     </div>
     <div class="slides"> </div>
   </div>
