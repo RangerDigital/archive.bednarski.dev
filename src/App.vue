@@ -49,7 +49,7 @@
     data() {
       return {
         options: {
-          licenseKey: "Open Source!",
+          licenseKey: "s&XcF3C?o8",
           controlArrows: true,
           afterLoad: this.afterLoad,
           loopBottom: true,
