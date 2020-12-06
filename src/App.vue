@@ -58,6 +58,11 @@
     },
     methods: {
       afterLoad(origin, destination, direction) {
+        console.log("Origin", origin);
+        console.log("Destination", destination);
+        console.log("Direction", direction);
+      
+      
         if (direction == "down") {
           switch (destination.index) {
             case 0:
