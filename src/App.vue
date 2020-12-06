@@ -1,6 +1,12 @@
 <template>
   <div>
-    <loading-overlay class="mobile-hidden" @scroll-to-top="$refs.fullpage.api.moveTo(1)" />
+    <loading-overlay
+      class="mobile-hidden"
+      @scroll-to-top="
+        $refs.fullpage.api.moveTo(1);
+        $refs.fullpage.build();
+      "
+    />
 
     <full-page ref="fullpage" :options="options" id="fullpage">
       <section class="section">
@@ -58,11 +64,8 @@
     },
     methods: {
       afterLoad(origin, destination, direction) {
-        console.log("Origin", origin);
-        console.log("Destination", destination);
-        console.log("Direction", direction);
-      
-      
+        console.log("Scroll direction:", direction);
+
         if (direction == "down") {
           switch (destination.index) {
             case 0:
@@ -98,6 +101,11 @@
           }
         }
       },
+    },
+    mounted() {
+      this.$nextTick(function() {
+        this.$refs.fullpage.build();
+      });
     },
   };
 </script>
