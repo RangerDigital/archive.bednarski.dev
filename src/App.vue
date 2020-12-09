@@ -66,7 +66,7 @@
       afterLoad(origin, destination, direction) {
         console.log("Scroll direction:", direction);
 
-        if (direction == "down") {
+        if (direction != "up") {
           switch (destination.index) {
             case 0:
               window.document.title = "Jakub Bednarski | Designer / Software Engineer";
