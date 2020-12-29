@@ -4,8 +4,10 @@ import "fullpage.js/vendors/scrolloverflow";
 import VueFullPage from "vue-fullpage.js";
 import anime from "animejs/lib/anime.min.js";
 import VueGtag from "vue-gtag";
+import router from "./router/"
 
 Vue.prototype.$anime = anime;
+
 
 Vue.use(VueGtag, {
   config: {
@@ -20,5 +22,6 @@ Vue.use(VueFullPage);
 Vue.config.productionTip = false;
 
 new Vue({
-  render: (h) => h(App),
-}).$mount("#app");
+  router,
+  render: h => h(App)
+}).$mount("#app")
