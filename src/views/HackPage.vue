@@ -80,6 +80,19 @@
       },
     },
     mounted() {
+      document.addEventListener("keydown", () => {
+        var sound = new Howl({
+          src: [require("../assets/sounds/beep-01.mp3")],
+          onplayerror: function() {
+            sound.once("unlock", function() {
+              sound.play();
+            });
+          },
+        });
+
+        sound.play();
+      });
+
       this.$anime({
         targets: ".bluescreen",
         duration: 5000,
