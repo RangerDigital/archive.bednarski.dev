@@ -53,7 +53,7 @@
           });
 
           if (!this.loadingComplete) {
-            this.$emit("scroll-to-top");
+            // this.$emit("scroll-to-top");
           }
         },
       });
