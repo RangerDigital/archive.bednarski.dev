@@ -51,10 +51,6 @@
             easing: "easeOutQuad",
             delay: 1000,
           });
-
-          if (!this.loadingComplete) {
-            // this.$emit("scroll-to-top");
-          }
         },
       });
 
@@ -75,6 +71,13 @@
           this.loadingComplete = true;
         },
       });
+    },
+    watch: {
+      loadingComplete: function(val) {
+        if (val === true) {
+          this.$emit("scroll-to-top");
+        }
+      },
     },
   };
 </script>

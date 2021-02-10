@@ -3,8 +3,8 @@
     <loading-overlay
       class="mobile-hidden"
       @scroll-to-top="
-        $refs.fullpage.api.moveTo(1);
         $refs.fullpage.build();
+        $refs.fullpage.api.MoveTo(1);
       "
     />
 
