@@ -4,8 +4,9 @@
       class="mobile-hidden"
       @scroll-to-top="
         $refs.fullpage.build();
-        $refs.fullpage.api.MoveTo(1);
+        $refs.fullpage.api.moveTo(1);
       "
+      ref="loadingOverlay"
     />
 
     <full-page ref="fullpage" :options="options" id="fullpage">
@@ -67,7 +68,7 @@
         console.log("Scroll direction:", direction);
         console.log(destination.index);
 
-        if (direction != "up") {
+        if (direction != "up" && this.$refs.loadingOverlay.loadingComplete) {
           switch (destination.index) {
             case 0:
               window.document.title = "Jakub Bednarski | Designer / Software Engineer";
