@@ -65,6 +65,7 @@
     methods: {
       afterLoad(origin, destination, direction) {
         console.log("Scroll direction:", direction);
+        console.log(destination.index);
 
         if (direction != "up") {
           switch (destination.index) {
