@@ -15,12 +15,12 @@
 
       <div>
         <p><span class="cl-red">Software Engineer</span> who loves building and breaking visually pleasing products.</p>
-        <p class="mobile-hidden">Big fan of anime, <span class="cl-red">Python</span>, <span class="cl-red">Vue.js</span> and <span class="cl-red">Open Source</span> software!</p>
+        <p class="mobile-hidden">Big fan of anime, <span class="cl-red">Python</span>, <span class="cl-red">Node.js</span>, <span class="cl-red">Vue.js</span> and <span class="cl-red">Open Source</span> software!</p>
       </div>
     </section>
 
     <section>
-      <outline-button @click-event="$emit('scroll-down-event')"><heart-icon size="1.5x" class="button-icon"></heart-icon>SEE MY WORK</outline-button>
+      <outline-button @click-event="$emit('scroll-down-event')"><heart-icon size="1.5x" class="button-icon"></heart-icon>See My Work</outline-button>
       <p>Or just scroll down.</p>
     </section>
 
