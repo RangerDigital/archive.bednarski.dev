@@ -5,9 +5,9 @@
 </template>
 
 <style>
-  @import "./assets/css/reset.css";
-  @import url("https://fonts.googleapis.com/css?family=Baloo+Thambi+2&display=swap");
-  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+  @import './assets/css/reset.css';
+  @import url('https://fonts.googleapis.com/css?family=Baloo+Thambi+2&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 
   html {
     font-size: 10px;
@@ -22,7 +22,7 @@
   h1 {
     font-size: 9rem;
     font-weight: 500;
-    font-family: "Poppins";
+    font-family: 'Poppins';
     color: #e4e4e4;
     letter-spacing: 0.01em;
   }
@@ -30,7 +30,7 @@
   h2 {
     font-size: 2.5rem;
     font-weight: 500;
-    font-family: "Poppins";
+    font-family: 'Poppins';
     color: #e4e4e4;
     letter-spacing: 0.03em;
 
@@ -40,7 +40,7 @@
   p {
     font-size: 2rem;
     font-weight: 500;
-    font-family: "Baloo Thambi 2";
+    font-family: 'Baloo Thambi 2';
     color: #707070;
     letter-spacing: 0.03em;
     text-align: center;
@@ -133,11 +133,22 @@
   /* Normal sized desktops. */
   @media only screen and (min-width: 1600px) and (max-width: 2000px) {
     html {
-      font-size: 9.5px;
+      font-size: 8px;
     }
 
     .g-component-flex {
-      padding: 3rem;
+      padding: 5rem;
+    }
+  }
+
+  /* Big desktops. */
+  @media only screen and (min-width: 2000px) and (max-width: 3000px) {
+    html {
+      font-size: 9.5px;
+    }
+
+    h1 {
+      font-size: 9.5rem;
     }
   }
 

@@ -14,8 +14,11 @@
       <div class="divider"></div>
 
       <div>
-        <p><span class="cl-red">Software Engineer</span> who loves building and breaking visually pleasing products.</p>
-        <p class="mobile-hidden">Big fan of anime, <span class="cl-red">Python</span>, <span class="cl-red">Node.js</span>, <span class="cl-red">Vue.js</span> and <span class="cl-red">Open Source</span> software!</p>
+        <p><span class="cl-red">Full-Stack Engineer</span> who loves building and breaking visually pleasing web apps and IoT products.</p>
+        <p class="mobile-hidden"
+          >Big fan of anime, <span class="cl-red">Python</span>, <span class="cl-red">Node.js</span>, <span class="cl-red">Vue.js</span>, <span class="cl-red">DevOps</span> and
+          <span class="cl-red">Open Source</span> software!</p
+        >
       </div>
     </section>
 
@@ -39,11 +42,11 @@
 </template>
 
 <script>
-  import OutlineButton from "../components/OutlineButton.vue";
-  import { HeartIcon, MailIcon, MapPinIcon, GithubIcon, DribbbleIcon, BoxIcon } from "vue-feather-icons";
+  import OutlineButton from '../components/OutlineButton.vue';
+  import { HeartIcon, MailIcon, MapPinIcon, GithubIcon, DribbbleIcon, BoxIcon } from 'vue-feather-icons';
 
   export default {
-    name: "HeroSection",
+    name: 'HeroSection',
     components: {
       OutlineButton,
       HeartIcon,
